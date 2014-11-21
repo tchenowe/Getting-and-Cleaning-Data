@@ -1,6 +1,6 @@
-#### *timchenoweth* {.author}
+#### *timchenoweth*
 
-#### *Fri Nov 21 10:36:28 2014* {.date}
+#### *Fri Nov 21 10:36:28 2014*
 
 Load dplyr library
 
@@ -19,9 +19,9 @@ library("dplyr")
     ## 
     ##     intersect, setdiff, setequal, union
 
-Constructs Test Data
+Construct Test Data
 
-    €”Load Training Data Files
+#'* €”Load Training Data Files
 
 ``` {.r}
 XData<-read.table("UCI HAR Dataset/test/X_test.txt")
