@@ -73,7 +73,7 @@ In addition to these six files, my project also used the **features.txt** file, 
 
 ####Project Data Transformations
 
-What follows is a summary description of the steps and transformations performed to create the TidyData data set. For more details see the [README.md file](README.html).
+What follows is a summary description of the steps and transformations performed to create the TidyData data set. For more details see the [README.md file](README.md).
 
 1. Construct the test data frame.
     a. Read in the three test folder files and features.txt.
