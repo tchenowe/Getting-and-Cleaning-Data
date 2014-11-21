@@ -4,9 +4,9 @@
 
 Load dplyr library
 
-``` {.r}
-library("dplyr")
-```
+
+    library("dplyr")
+
 
     ## 
     ## Attaching package: 'dplyr'
