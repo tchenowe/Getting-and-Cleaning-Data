@@ -106,6 +106,7 @@ meanData <- finalData %>%
     summarise_each(funs(mean))
 ```
 Write the TidyData.txt file
+
     write.table(meanData, file = "TidyData.txt", row.name=FALSE)
 
 Remove Temporary Data Frames and Variables
