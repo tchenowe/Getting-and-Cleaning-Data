@@ -21,7 +21,7 @@ library("dplyr")
 
 Construct Test Data
 
-#'* €”Load Training Data Files
+€”Load Training Data Files
 
 ``` {.r}
 XData<-read.table("UCI HAR Dataset/test/X_test.txt")
@@ -30,7 +30,7 @@ subjects <- read.table("UCI HAR Dataset/test/subject_test.txt")
 features<-read.table("UCI HAR Dataset/features.txt")   #'Loading the Features Data File.
 ```
 
-* €”Properly Label Columns
+€”Properly Label Columns
 
 ``` {.r}
 names(XData) <- features$V2
@@ -39,7 +39,7 @@ names(YData) <- "Activities"
 names(subjects) <- "Subjects"
 ```
 
-* €”Add the Activities and Subjects Columns to the Data Frame
+€”Add the Activities and Subjects Columns to the Data Frame
 
 ``` {.r}
 XYData<-cbind(YData,XData)
@@ -48,7 +48,7 @@ testData <- cbind(subjects,XYData)
 
 Constructs Train Data
 
-* €”Loading Training Data Files
+€”Loading Training Data Files
 
 ``` {.r}
 XData<-read.table("UCI HAR Dataset/train/X_train.txt")
@@ -56,7 +56,7 @@ YData<-read.table("UCI HAR Dataset/train/y_train.txt")
 subjects <- read.table("UCI HAR Dataset/train/subject_train.txt")
 ```
 
-* €”Properly Label Columns
+€”Properly Label Columns
 
 ``` {.r}
 names(XData) <- features$V2
@@ -65,7 +65,7 @@ names(YData) <- "Activities"
 names(subjects) <- "Subjects"
 ```
 
-* €”Add the Activities and Subjects Columns to the Data Frame
+€”Add the Activities and Subjects Columns to the Data Frame
 
 ``` {.r}
 XYData<-cbind(YData,XData)
