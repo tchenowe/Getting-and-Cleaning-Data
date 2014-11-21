@@ -3,10 +3,10 @@ library("dplyr")
 
 #'Constructs Test Data
 #'* Load Training Data Files
-XData<-read.table("UCI HAR Dataset/test/X_test.txt")
-YData<-read.table("UCI HAR Dataset/test/y_test.txt")
-subjects <- read.table("UCI HAR Dataset/test/subject_test.txt")
-features<-read.table("UCI HAR Dataset/features.txt")   #'Loading the Features Data File.
+XData<-read.table("X_test.txt")
+YData<-read.table("y_test.txt")
+subjects <- read.table("subject_test.txt")
+features<-read.table("features.txt")   #'Loading the Features Data File.
 
 #'* Properly Label Columns
 names(XData) <- features$V2
@@ -20,9 +20,9 @@ testData <- cbind(subjects,XYData)
 
 #'Constructs Train Data
 #'* Loading Training Data Files
-XData<-read.table("UCI HAR Dataset/train/X_train.txt")
-YData<-read.table("UCI HAR Dataset/train/y_train.txt")
-subjects <- read.table("UCI HAR Dataset/train/subject_train.txt")
+XData<-read.table("X_train.txt")
+YData<-read.table("y_train.txt")
+subjects <- read.table("subject_train.txt")
 
 #'* Properly Label Columns
 names(XData) <- features$V2
@@ -55,6 +55,9 @@ finalData <- select(mergeData, Subjects, Activities,
 meanData <- finalData %>%
     group_by(Activities, Subjects) %>%
     summarise_each(funs(mean))
+
+#'Write the TidyData.txt file
+write.table(meanData, file = "TidyData.txt", row.name=FALSE)
 
 #'Remove Temporary Data Frames and Variables
 rm(XYData)
