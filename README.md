@@ -21,7 +21,7 @@ library("dplyr")
 
 Constructs Test Data
 
-* €”Load Training Data Files
+##€”Load Training Data Files
 
 ``` {.r}
 XData<-read.table("UCI HAR Dataset/test/X_test.txt")
